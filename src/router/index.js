@@ -147,7 +147,39 @@ export const constantRoutes = [
       }
     ]
   },
-
+  {
+    path: '/components',
+    component: Layout,
+    meta: {
+      title: '组件demo'
+    },
+    children: [
+      {
+        path: 'dynamic-form',
+        name: 'DynamicFormDemo',
+        component: () => import('@/views/components-demo/dynamic-form-demo.vue'),
+        meta: { title: '动态表单demo', icon: 'form' }
+      },
+      {
+        path: 'image-upload',
+        name: 'ImageUploadDemo',
+        component: () => import('@/views/components-demo/image-upload-demo.vue'),
+        meta: { title: '图片上传demo', icon: 'form' }
+      },
+      {
+        path: 'dynamic-table',
+        name: 'DynamicTableDemo',
+        component: () => import('@/views/components-demo/dynamic-table-demo.vue'),
+        meta: { title: '动态列表demo', icon: 'form' }
+      },
+      {
+        path: 'form-table',
+        name: 'FormTableDemo',
+        component: () => import('@/views/components-demo/form-table-demo.vue'),
+        meta: { title: '列表demo', icon: 'form' }
+      }
+    ]
+  },
   {
     path: 'external-link',
     component: Layout,
