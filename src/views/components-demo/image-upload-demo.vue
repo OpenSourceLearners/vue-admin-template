@@ -5,7 +5,7 @@
     <!-- <image-upload
       v-model="url2"
       url-field="data.fileUrl"
-      action="http://campus.hailiangedu.com:8092/simsbff/file/uploadSingle"
+      action="/upload"
     /> -->
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
       const formData = new FormData();
       formData.append('file', file);
       Axios.post(
-        'http://campus.hailiangedu.com:8092/simsbff/file/uploadSingle',
+        '/upload',
         formData,
         {
           onUploadProgress: onProgress
